@@ -1,24 +1,26 @@
+// src/components/NavBar.jsx
 import React from 'react';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top w-100">
-      <a className="navbar-brand ms-3" href="#">MiTienda</a>
+      <Link className="navbar-brand ms-3" to="/">MiTienda</Link>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link" href="#">Inicio</a>
+            <Link className="nav-link" to="/">Inicio</Link>
           </li>
 
           <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <Link className="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Productos
-            </a>
+            </Link>
             <ul className="dropdown-menu" aria-labelledby="productosDropdown">
-              <li><a className="dropdown-item" href="#">Categoría 1</a></li>
-              <li><a className="dropdown-item" href="#">Categoría 2</a></li>
-              <li><a className="dropdown-item" href="#">Categoría 3</a></li>
+              <li><Link className="dropdown-item" to="/category/hombre">Hombre</Link></li>
+              <li><Link className="dropdown-item" to="/category/mujer">Mujer</Link></li>
+              <li><Link className="dropdown-item" to="/category/ninos">Niños y Niñas</Link></li>
             </ul>
           </li>
 
