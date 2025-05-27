@@ -1,49 +1,27 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
-  const [count, setCount] = useState(0);
-
-  // Funciones para sumar y restar
-  const increment = () => setCount(count + 1);
-  const decrement = () => count > 0 && setCount(count - 1);
+  const { calcItemsQty } = useContext(CartContext);
+  const totalQuantity = calcItemsQty ? calcItemsQty() : 0;
 
   return (
-    <div className="d-flex align-items-center me-4">
+    <Link to="/cart" className="d-flex align-items-center me-4" style={{ textDecoration: "none" }}>
       <div className="position-relative">
         <FaShoppingCart size={22} className="text-white" />
-        {count > 0 && (
+        {totalQuantity > 0 && (
           <span
             className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
             style={{ fontSize: "0.7rem", padding: "0.25em 0.4em" }}
           >
-            {count}
+            {totalQuantity}
           </span>
         )}
       </div>
-
-      {/* Botones para probar el contador */}
-      <div className="ms-2 d-flex flex-column">
-        <button
-          onClick={increment}
-          className="btn btn-sm btn-light py-0 px-1 mb-1"
-          style={{ fontSize: "0.6rem", lineHeight: "1" }}
-        >
-          +
-        </button>
-        <button
-          onClick={decrement}
-          className="btn btn-sm btn-light py-0 px-1"
-          style={{ fontSize: "0.6rem", lineHeight: "1" }}
-        >
-          -
-        </button>
-      </div>
-    </div>
+    </Link>
   );
 };
 
 export default CartWidget;
-
-
-

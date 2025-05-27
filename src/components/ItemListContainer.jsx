@@ -1,7 +1,7 @@
 // src/components/ItemListContainer.jsx
 
 import React, { useEffect, useState } from "react";
-import { getProducts } from "../mocks/products";
+import { getProducts } from '../services/productService';
 import { useParams } from "react-router-dom";
 import Item from "./Item";
 
