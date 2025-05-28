@@ -1,4 +1,4 @@
-# Curso React JS
+# MiTienda Online!
 
 Este proyecto es parte del curso de React JS y está diseñado para practicar y aplicar los conceptos aprendidos. Utiliza Vite como bundler para una configuración rápida y moderna.
 
