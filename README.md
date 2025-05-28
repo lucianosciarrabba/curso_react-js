@@ -15,10 +15,13 @@ Este proyecto es parte del curso de React JS y está diseñado para practicar y 
    ```bash
    git clone https://github.com/lucianosciarrabba/curso_react-js.git
    cd curso_react-js
+
 2. Instalación de dependencias:
+    ```bash
     npm install
 
 3. Configurar el archivo .env
+    ```bash
     VITE_FIREBASE_API_KEY
     VITE_FIREBASE_AUTH_DOMAIN
     VITE_FIREBASE_PROJECT_ID
@@ -27,6 +30,7 @@ Este proyecto es parte del curso de React JS y está diseñado para practicar y 
     VITE_FIREBASE_API_ID
 
 4. Levantar el proyecto
+    ```bash
     npm run dev
 
 
