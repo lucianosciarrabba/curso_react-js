@@ -18,20 +18,27 @@ Este proyecto es parte del curso de React JS y está diseñado para practicar y 
 2. Instalación de dependencias:
     npm install
 
-3. Iniciar el servidor de desarrollo:
+3. Configurar el archivo .env
+    VITE_FIREBASE_API_KEY
+    VITE_FIREBASE_AUTH_DOMAIN
+    VITE_FIREBASE_PROJECT_ID
+    VITE_FIREBASE_STORAGE_BUCKET
+    VITE_FIREBASE_MESSAGING_SENDER_ID
+    VITE_FIREBASE_API_ID
+
+4. Levantar el proyecto
     npm run dev
 
-4. Abrir en el navegador:
-    Visitar http://localhost:5173 para ver la aplicación en funcionamiento.
 
+## Librerías implementadas
 
-⚙️ Configuración adicional
-Variables de entorno: Actualmente, no se requieren variables de entorno específicas.
+- Firebase
+- Bootstrap
+- React-router-dom
 
-Testing: No se han implementado pruebas en este proyecto.
+## Deploy
 
-📄 Licencia
-Este proyecto está bajo la licencia MIT. Ver el archivo LICENSE para más detalles.
+[Vercel] (https://curso-react-js-phi.vercel.app/)
 
 👤 Autor
 Luciano Sciarrabba - GitHub
